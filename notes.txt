@@ -1,0 +1,35 @@
+Results for the extraLargeArray
+append 2.306916 ms
+insert 779.404875 ms
+
+Results for the largeArray
+append 336.875 μs
+insert 6.550458 ms
+
+Results for the mediumArray
+append 188.125 μs
+insert 193.875 μs
+
+Results for the smallArray
+append 5.125 μs
+insert 6.959 μs
+
+Results for the tinyArray
+append 1.959 μs
+insert 11.125 μs
+
+The doublerAppend function is exceedingly more efficient, 
+as for every calculation the function is performing: 
+less steps are involved,
+owing to the inherent nature of the .push() method.
+The .push() method is designed to simply place any new addition to an array, 
+at the tail end of said array. 
+In contrast, 
+the .unshift() method is more involved: 
+in order for the .unshift() method to perform the identical task, 
+it must perform the following additional-tasks: 
+by adding numbers to the front of an array,
+the entire array, (no matter it size) 
+must shift all numbers into new indexes as to accommodate the newest additions. 
+That additional step in the .unshift() method makes its scaling-runtime-complexity: hyperbolic, 
+where as I believe the .push() method is closer to linear in nature. 
